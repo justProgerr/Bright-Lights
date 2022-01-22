@@ -1,0 +1,118 @@
+.lastTracks {
+    margin-top: 180px;
+
+    & .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+    }
+
+    &__img {
+        margin-top: 35px;
+        display: inline-block;
+        border-radius: 50%;
+        border: 20px solid rgba(122, 102, 204, .3);
+
+        & img {
+            border-radius: 50%;
+            border: 20px solid #7A66CC;
+        }
+    }
+
+    &__content {
+        width: 540px;
+
+        & h2 {
+            margin-bottom: 60px;
+        }
+
+        & svg {
+            margin-right: 30px;
+        }
+
+        & ol {
+            margin: 50px 0;
+            counter-reset:  item;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 27px;
+
+            & li {
+                position: relative;
+                cursor: pointer;
+
+                &+li {
+                    margin-top: 20px;
+                }
+
+                &:nth-child(-n+9)::before {
+                    position: absolute;
+                    top: 4px;
+                    content: '0' counter(item);
+                    counter-increment: item; 
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 21px;
+                    opacity: .5;
+                }
+
+                &:nth-child(n+10)::before {
+                    content: counter(item);
+                    counter-increment: item; 
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 21px;
+                    opacity: .5;
+                }
+
+                &:hover span {
+                    border-left: 2px solid #7A66CC;
+                    border-bottom: 3px solid #7A66CC;
+                    opacity: .5;
+                }
+
+                &:hover::after {
+                    position: absolute;
+                    left: -2px; top: 0;
+                    display: block;
+                    content: " \27A4 ";
+                    width: 20px;
+                    height: 30px;
+                    background-color: #1C1B21;
+                }
+            }
+
+            & span {
+                margin-left: 35px; 
+                padding: 0 10px;
+            }
+        }
+    }
+
+    & .audio--active {
+        font-weight: 600;
+        color: #7A66CC;
+    }
+
+    &__subscrip {
+        font-style: normal;
+        font-weight: 600;
+
+        & span {
+            font-size: 24px;
+            line-height: 36px;
+            margin-right: 10px;
+        }
+
+        & a {
+            font-size: 14px;
+            line-height: 21px;
+            margin-left: 30px;
+        }
+
+        & svg {
+            margin-right: 10px;
+        }
+    }
+}

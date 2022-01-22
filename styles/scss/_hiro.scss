@@ -1,0 +1,27 @@
+.hiro {
+    height: 900px;
+
+    & .container {
+        display: flex; 
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__audio {
+        & figure {
+            margin-top: 50px;
+        }
+
+        & figcaption {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 100px;
+            color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #fff;
+            margin-bottom: 70px;
+        }
+    }
+}
+
