@@ -1,0 +1,29 @@
+.interesting {
+    transform: translatey(-150px);
+
+    & .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        position: relative;
+        border-radius: 20px 0;
+        overflow: hidden;
+
+        & img {
+            border-radius: 20px 0;
+        }
+
+        & p {
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            padding: 20px;
+            background-color: rgba(122, 102, 204, .7);
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            border-radius: 20px 0;
+        }
+    }
+}

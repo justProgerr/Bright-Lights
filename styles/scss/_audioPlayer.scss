@@ -1,0 +1,111 @@
+.audio {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+
+    &__progress__box {
+        position: relative;
+        display: flex;
+        align-items: center;
+        max-width: 887px;
+        width: 100%;
+        margin: 0 45px;
+    }
+
+    &__progress__bar {
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        position: relative;
+        width: 100%;
+        height: 2px;
+        transition: .1s;
+        cursor: e-resize;
+
+        &::-webkit-progress-bar {
+            background-color: #fff;
+        }
+
+        &::-webkit-progress-value {
+            background-color: #7A66CC;
+        }
+
+        &::-moz-progress-bar {
+            background-color: #7A66CC;
+        }
+    }
+
+    &:hover &__progress__bar {
+        height: 10px;
+    }
+
+    &:hover &__toddler {
+        height: 30px;
+        width: 4px;
+    }
+
+    &__toddler {
+        position: absolute;
+        display: block;
+        width: 2px;
+        height: 20px;
+        background-color: #7A66CC;
+        cursor: e-resize;
+        transition: .1s;
+
+        &__control {
+            -webkit-touch-callout: none; 
+            -webkit-user-select: none;   
+            -khtml-user-select: none;    
+            -moz-user-select: none;      
+            -ms-user-select: none;       
+            user-select: none;
+            position: absolute;
+            display: block;
+            width: 4px;
+            height: 30px;
+            cursor: e-resize;
+            background-color: #b6a9e7af;
+            opacity: 0;
+
+            &--opacity {
+                opacity: 1;
+            }
+        }
+
+        &__currTime {
+            position: relative;
+            bottom: -35px; left: -48px;
+            display: block;
+            width: 100px;
+            text-align: center;
+        }
+    }
+
+    &__btn {
+        width: 25px;
+        height: 25px;
+        background: none;
+        border: none;
+        cursor: pointer;
+
+        & svg {
+            fill: #fff;
+            transition: .1s;
+
+            &:hover {
+                fill: #7A66CC;
+            }
+        }
+    }
+
+    &__time {
+        text-align: center;
+        width: 90px;
+    }
+}
+

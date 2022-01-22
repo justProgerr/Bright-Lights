@@ -1,0 +1,33 @@
+.header {
+    padding: 30px 0;
+    background-image: url(../../images/bg-hiro.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 1000px;
+
+    & > .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__nav {
+        display: inline-block;
+        margin-left: 65px;
+        
+        & li {
+            display: inline-block;
+
+            &+li {
+                margin-left: 56px;
+            }
+        }
+    }
+
+    & a {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        text-decoration: none;
+    }
+}
