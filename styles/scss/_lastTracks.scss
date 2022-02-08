@@ -9,18 +9,23 @@
 
     &__img {
         margin-top: 35px;
-        display: inline-block;
+        max-width: 500px;
+        width: 100%;
         border-radius: 50%;
         border: 20px solid rgba(122, 102, 204, .3);
+        align-self: flex-start;
 
         & img {
+            display: inline-block;
+            width: 100%;
             border-radius: 50%;
             border: 20px solid #7A66CC;
         }
     }
 
     &__content {
-        width: 540px;
+        max-width: 540px;
+        width: 100%;
 
         & h2 {
             margin-bottom: 60px;
@@ -86,6 +91,7 @@
             & span {
                 margin-left: 35px; 
                 padding: 0 10px;
+                white-space: nowrap;
             }
         }
     }
@@ -96,6 +102,7 @@
     }
 
     &__subscrip {
+        display: flex;
         font-style: normal;
         font-weight: 600;
 
@@ -106,13 +113,31 @@
         }
 
         & a {
+            display: flex;
+            align-items: center;
+            width: 100px;
+            text-decoration: none;
             font-size: 14px;
             line-height: 21px;
             margin-left: 30px;
+            transition: .2s;
+
+            &:hover {
+                color: #7A66CC;
+            }
+
+            &:hover svg {
+                fill: #7A66CC;
+                transform: translateY(-5px);
+            }
         }
 
         & svg {
             margin-right: 10px;
+            fill: #fff;
+            width: 20px;
+            height: 20px;
+            transition: .2s;
         }
     }
 }

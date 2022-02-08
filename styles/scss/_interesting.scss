@@ -4,15 +4,21 @@
     & .container {
         display: flex;
         justify-content: space-between;
+        gap: 10px;
     }
 
     &__item {
         position: relative;
+        min-width: 300px;
+        width: 31.53%;
         border-radius: 20px 0;
         overflow: hidden;
 
         & img {
+            width: 100%;
             border-radius: 20px 0;
+            opacity: 1;
+            transition: .2s;
         }
 
         & p {
@@ -24,6 +30,19 @@
             font-weight: 500;
             font-size: 16px;
             border-radius: 20px 0;
+            transition: .2s;
+            white-space: nowrap;
+        }
+
+        &:hover p {
+            bottom: 77%;
+            transition: .5s;
+            background-color: rgba(122, 102, 204, .9);
+        }
+
+        &:hover img {
+            opacity: .7;
+            transition: .5s;
         }
     }
 }
