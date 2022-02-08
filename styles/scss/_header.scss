@@ -1,0 +1,66 @@
+.header {
+    padding: 30px 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .2) 0%, #1C1B21 92.19%),
+        url(../images/bg-hiro.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50%;
+    height: 1000px;
+
+    & > .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 65px;
+    }
+
+    &__nav {
+        display: inline-block;
+        
+        & li {
+            display: inline-block;
+
+            &+li {
+                margin-left: 56px;
+            }
+        }
+
+        & a {
+            padding: 4px 10px;
+            color: rgb(206, 196, 247);
+
+            &:hover {
+                color: #fff;
+                border-bottom: 3px solid rgba(122, 102, 204, .5);
+            }
+        }
+    }
+
+    & .btn-menu {
+        display: none;
+
+        & svg {
+            width: 30px;
+            height: 30px;
+            fill: #fff;
+            cursor: pointer;
+
+            &:hover {
+                fill: #7A66CC;
+            }
+        }
+
+        &--active {
+            & svg {
+                fill: #7A66CC;
+            }
+        }
+    }
+
+    & a {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        text-decoration: none;
+    }
+}
